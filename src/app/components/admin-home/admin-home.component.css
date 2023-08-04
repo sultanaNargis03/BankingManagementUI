@@ -1,0 +1,25 @@
+
+ .vertical-nav {
+  min-width: 30rem;
+  width: 30rem;
+  margin-top: 0px;
+  top: 0;
+  left: 0;
+}
+
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+.text-gray {
+  color: #aaa;
+}
+.nav-link{
+    text-transform: capitalize;
+}
+.nav-link:hover{
+    background:#f3f2f2;
+}
+.text-primary{
+    color:#080ed4 !important;
+}
+

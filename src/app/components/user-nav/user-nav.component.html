@@ -1,0 +1,58 @@
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center">
+      <img loading="lazy" src="/assets/user1.png" alt="..." width="80" height="80" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+      <div class="media-body">
+        <h4 class="m-0">{{userName}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 large pb-4 mb-0" style="font-size: 20px;">Dashboard</p>
+
+  <ul class="nav flex-column bg-white mb-0" style="font-size: 25px;">
+
+    <li class="nav-item">
+      <a routerLink="/uhome" class="nav-link text-dark bg-light" style="padding-bottom: 15px;">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Home
+            </a>
+    </li>
+        <li class="nav-item">
+      <a routerLink="/uaccount" class="nav-link text-dark" style="padding-bottom: 15px;">
+                <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                My Accounts
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/udeposit" class="nav-link text-dark" style="padding-bottom: 15px;">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                Deposit
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/uwithdraw" class="nav-link text-dark" style="padding-bottom: 15px;">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Withdraw
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/utransfer" class="nav-link text-dark" style="padding-bottom: 15px;">
+                <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                Transfer
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/userstatements" class="nav-link text-dark bg-light" style="padding-bottom: 15px;">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+               Account Statement
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/userhistory" class="nav-link text-dark" style="padding-bottom: 15px;">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                Transaction History
+            </a>
+    </li>
+  </ul>
+</div>

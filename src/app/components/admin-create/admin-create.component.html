@@ -1,0 +1,92 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <div class="bootstrap-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4"><app-admin-nav></app-admin-nav></div>
+        <div class="col-md-8">
+          <h4 style="font-weight: bold;font-size: 50px;margin-top: 10%;text-align: center;margin-left: -10%;">ENTER CUSTOMER DETAILS</h4>
+          <div style="margin-top: 10%;">
+            <form (ngSubmit)="OnSubmit()" >
+              <div class="form-group">
+                <label for="custId" style="font-size: 25px;margin-right: 10px;">Customer Id</label>
+                <input [(ngModel)]="custId" name="custId" type="number" style="border: 2px solid black;height:50px;width: 600px; font-size:14pt;" placeholder="Customer Id" id="custId" required>
+              </div>
+              <div class="form-group">
+                <label for="custName" style="font-size: 25px;margin-right: 10px;">Customer Name</label>
+                <input [(ngModel)]="custName" name="custName" type="text" style="border: 2px solid black;height:50px;width: 600px; font-size:14pt;" placeholder="Customer Name" id="custId" required>
+              </div>
+              <div class="form-group">
+                <label for="custAddress" style="font-size: 25px;margin-right: 10px;">Customer Address</label>
+                <input [(ngModel)]="custAddress" name="custAddress" type="text" style="border: 2px solid black;height:50px;width: 600px; font-size:14pt;" placeholder="Customer Address" id="custId" required>
+              </div>
+              <div class="form-group">
+                <label for="custPanNo" style="font-size: 25px;margin-right: 10px;">Pan Number</label>
+                <input [(ngModel)]="custPanNo" name="custPanNo" type="text" style="border: 2px solid black;height:50px;width: 600px; font-size:14pt;" placeholder="Pan Number" id="custId" required>
+              </div>
+              <div class="form-group" style="margin-right: 80px;">
+                <label for="custDob" style="font-size: 25px;margin-right: 70px;">Birth Date</label>
+                <input [(ngModel)]="custDob" max="2003-12-31" name="custDob" pattern="\d{4}-\d{2}-\d{2}" type="date" style="border: 2px solid black;height:50px;width: 600px; font-size:14pt;" placeholder="Birth Date" id="custId" required>
+              </div>
+              <div class="form-group">
+                <label for="custUame" style="font-size: 25px;margin-right: 10px;">User Name</label>
+                <input [(ngModel)]="custUname" name="custUname" type="text" style="border: 2px solid black;height:50px;width: 600px; font-size:14pt;" placeholder="User Name" id="custId" required>
+                <br><small style="font-size: 15px;font-family:sans-serif;font-weight: bold;">Min 4 characters required</small>
+              </div>
+              <div class="form-group">
+                <label for="custPass" style="font-size: 25px;margin-right: 10px;">Password</label>
+                <input [(ngModel)]="custPass" name="custPass" type="text" style="border: 2px solid black;height:50px;width: 600px; font-size:14pt;" placeholder="Password" id="custId" required>
+                <br><small style="font-size: 15px;font-family:sans-serif;font-weight: bold;">Min 6 characters required</small>
+              </div>
+              <button type="submit" class="btn btn-primary btn-large" style="font-size: 18px;margin-left: 40%">Submit</button>
+            </form>
+          </div>
+          <h4 *ngIf="corrIdm" style="color:red;font-weight: bold;font-size: 50px;margin-top: 20px;" class="text-center">{{message}}</h4>
+          <div *ngIf="corrIdt" style="margin-top: 10%;margin-left: -18%;">
+            <h1 style="text-align: center;font-weight: bold;color: rgb(59, 62, 221);font-size: 50px;margin-bottom: 50px;">Customer Registeration Status</h1>
+            <table class="table table-striped" style="font-size: 16px;">
+              <thead>
+                <tr>
+                  <th scope="col">CustId</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Address.</th>
+                  <th scope="col">Pan Number</th>
+                  <th scope="col">BirthDate</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{status.custId}}</td>
+                  <td>{{custName}}</td>
+                  <td>{{custAddress}}</td>
+                  <td>{{custPanNo}}</td>
+                  <td>{{custDob}}</td>
+                  <td>{{status.message}}</td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Page content holder -->
+<!-- <div class="page-content " id="content" style="margin-top: -38.35%;">
+
+</div> -->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+

@@ -1,0 +1,52 @@
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center">
+      <img loading="lazy" src="/assets/admin.jpg" alt="..." width="80" height="80" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+      <div class="media-body">
+        <h4 class="m-0">{{userName}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 large pb-4 mb-0" style="font-size: 25px;">Dashboard</p>
+
+  <ul class="nav flex-column bg-white mb-0" style="font-size: 25px;">
+
+    <li class="nav-item">
+      <a routerLink="/ahome" class="nav-link text-dark bg-light" style="padding-bottom: 20px;">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Home
+            </a>
+    </li>
+        <li class="nav-item">
+      <a routerLink="/ustatements" class="nav-link text-dark" style="padding-bottom: 20px;">
+                <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                Transaction History
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/adminstatements" class="nav-link text-dark" style="padding-bottom: 20px;">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                Account Statements
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/addcustomer" class="nav-link text-dark" style="padding-bottom: 20px;">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Add Customer
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/customerdetails" class="nav-link text-dark" style="padding-bottom: 20px;">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                Customer Details
+            </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/adminaccounts" class="nav-link text-dark" style="padding-bottom: 20px;">
+                <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                User Accounts
+            </a>
+    </li>
+  </ul>
+</div>

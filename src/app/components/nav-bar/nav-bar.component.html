@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+<span><a mat-raised-button (click)="logoutUser()" routerLink="/">Cognizant Bank</a></span>
+<span class="example-spacer"></span>
+<a *ngIf="!loggedIn" mat-raised-button routerLink="/login">Login</a>
+<a *ngIf="loggedIn" (click)="logoutUser()" mat-raised-button routerLink="/login">Logout</a>
+</mat-toolbar>
